@@ -1,0 +1,6 @@
+<xwss:SecurityConfiguration dumpMessages="true" xmlns:xwss="http://java.sun.com/xml/ns/xwss/config">
+    <xwss:Sign includeTimestamp="false">
+        <xwss:X509Token certificateAlias="mycert" />
+        <xwss:SignatureMethod algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    </xwss:Sign>
+</xwss:SecurityConfiguration>

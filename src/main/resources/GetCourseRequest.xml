@@ -1,0 +1,50 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" SOAP-ENV:mustUnderstand="1">
+            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="SIG-38267c30-322f-4697-88cd-63c67bcf6b04">
+                <ds:SignedInfo>
+                    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                        <ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="SOAP-ENV"/>
+                    </ds:CanonicalizationMethod>
+                    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                    <ds:Reference URI="#TS-9e8bb51d-646d-4986-8aec-3da3fabc1de2">
+                        <ds:Transforms>
+                            <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                                <ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="wsse SOAP-ENV"/>
+                            </ds:Transform>
+                        </ds:Transforms>
+                        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <ds:DigestValue>a1CmaBTuT8w3iDnRu+Xe/KXL86E=</ds:DigestValue>
+                    </ds:Reference>
+                    <ds:Reference URI="#id-e30b731b-6dff-46cc-bf18-5d8bb0543567">
+                        <ds:Transforms>
+                            <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                        </ds:Transforms>
+                        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <ds:DigestValue>wzWii0Iped6C1pra6U+q+5+aT3U=</ds:DigestValue>
+                    </ds:Reference>
+                </ds:SignedInfo>
+                <ds:SignatureValue>D3Nr0YJQ7IK+voJK2Uzb7+Rg5nIv7SKav5lE7e7RTPf/vk57agWOambph98O96/L99LitzxCMIduZBjAAHTjx2IRbMrNaUxAV8180Qp3xgrKUtAv9IJzoiQmQ5IMef0xTT0gB2KjkispyoLuMoa9WkhGNBntHbEZD5vsJve4E7THyL46NJb554mfsAqsl/ezHlJ/so5/d5QsChQvDoHM4EpnK7ly0nl/KAnYQutd4KhYMgF0Ksy+CaSoez02TLcoHdC3sCPJcKIEnZ2FoEiJ/4uexfKaKXCVHCzJHk64FPoyKwE4xGIxrRoGarLjzhi5sZGcHye3jjbXg7LRdc/uWg==</ds:SignatureValue>
+                <ds:KeyInfo Id="KI-0decfb7f-a812-4614-b6c7-4e7819fbfe32">
+                    <wsse:SecurityTokenReference wsu:Id="STR-7ea6d07d-01a3-49f9-b2e4-b87425fb912c">
+                        <ds:X509Data>
+                            <ds:X509IssuerSerial>
+                                <ds:X509IssuerName>CN=myAlias</ds:X509IssuerName>
+                                <ds:X509SerialNumber>1155058504</ds:X509SerialNumber>
+                            </ds:X509IssuerSerial>
+                        </ds:X509Data>
+                    </wsse:SecurityTokenReference>
+                </ds:KeyInfo>
+            </ds:Signature>
+            <wsu:Timestamp wsu:Id="TS-9e8bb51d-646d-4986-8aec-3da3fabc1de2">
+                <wsu:Created>2020-07-04T20:40:15.254Z</wsu:Created>
+                <wsu:Expires>2020-07-04T20:45:15.254Z</wsu:Expires>
+            </wsu:Timestamp>
+        </wsse:Security>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="id-e30b731b-6dff-46cc-bf18-5d8bb0543567">
+        <ns2:GetCourseDetailsRequest xmlns:ns2="http://in28minutes.com/courses">
+            <ns2:id>1</ns2:id>
+        </ns2:GetCourseDetailsRequest>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
